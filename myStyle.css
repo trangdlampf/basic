@@ -1,0 +1,95 @@
+body {
+	font-family:"Times New Roman", Times, serif;
+	color:rgb(90,115,175); /* white 95aaca */
+	background-color:white; /* light gray #f7f9fb  light brown: #fbfbfb fcfcfa  fbfaf5    */
+	/* color:rgb(153,153,153);
+	background-color: CCC; /* CCC gray */
+	margin: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* ==================================================== */
+#wrapper {
+	margin:0 auto;
+	background:#dadada; /* light gray CCC e7e7e7 dadada */
+	width:1160px;
+	height:766px;
+	padding-left: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+#header {
+	width:1140px;
+	height: 80px;
+	position: relative;
+	border-bottom: 1px solid rgb(153,153,153);	
+	margin-bottom: 8px;
+}
+
+#title {
+	font-family:"Times New Roman", Times, serif;
+	float: left;
+	font-size: 28px;
+	margin-top: 22px; 
+	margin-left: 2px;
+	color: black;
+}
+
+/*
+div.tooltip {   
+  position: absolute;           
+  text-align: center;           
+  width: 60px;                  
+  height: 28px;                 
+  padding: 2px;             
+  font: 12px sans-serif;        
+  background: lightsteelblue;   
+  border: 0px;      
+  border-radius: 8px;           
+  pointer-events: none;         
+} */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+	/* cursor:crosshair; pointer*/
+	cursor: pointer;
+}
